@@ -160,7 +160,7 @@ def main(args):
     del checkpoint["vistr.class_embed.weight"]
     del checkpoint["vistr.class_embed.bias"]
     del checkpoint["vistr.query_embed.weight"]
-    model.module.load_state_dict(checkpoint,strict=False)
+    model.load_state_dict(checkpoint,strict=False)
 
     if args.resume:
         if args.resume.startswith('https'):
