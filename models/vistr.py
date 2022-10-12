@@ -28,7 +28,7 @@ class VisTR(nn.Module):
             num_classes: number of object classes
             num_queries: number of object queries, ie detection slot. This is the maximal number of objects
                          VisTR can detect in a video. For ytvos, we recommend 10 queries for each frame, 
-                         thus 360 queries for 36 frames.
+                         thus 40 queries for 4 frames.
             aux_loss: True if auxiliary decoding losses (loss at each decoder layer) are to be used.
         """
         super().__init__()

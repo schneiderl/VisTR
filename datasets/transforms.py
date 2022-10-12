@@ -319,14 +319,14 @@ class RandomSaturation(object):
 
 class RandomHue(object): #
     def __init__(self, delta=18.0):
-        assert delta >= 0.0 and delta <= 360.0
+        assert delta >= 0.0 and delta <= 40.0
         self.delta = delta
 
     def __call__(self, image, target):
         if rand.randint(2):
             image[:, :, 0] += rand.uniform(-self.delta, self.delta)
-            image[:, :, 0][image[:, :, 0] > 360.0] -= 360.0
-            image[:, :, 0][image[:, :, 0] < 0.0] += 360.0
+            image[:, :, 0][image[:, :, 0] > 40.0] -= 40.0
+            image[:, :, 0][image[:, :, 0] < 0.0] += 40.0
         return image, target
 
 class RandomLightingNoise(object):

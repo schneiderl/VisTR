@@ -55,9 +55,9 @@ def get_args_parser():
                         help="Dropout applied in the transformer")
     parser.add_argument('--nheads', default=8, type=int,
                         help="Number of attention heads inside the transformer's attentions")
-    parser.add_argument('--num_frames', default=36, type=int,
+    parser.add_argument('--num_frames', default=4, type=int,
                         help="Number of frames")
-    parser.add_argument('--num_queries', default=360, type=int,
+    parser.add_argument('--num_queries', default=40, type=int,
                         help="Number of query slots")
     parser.add_argument('--pre_norm', action='store_true')
 
